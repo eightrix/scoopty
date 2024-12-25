@@ -1,0 +1,31 @@
+{
+  "name": "socialtalk",
+  "version": "1.0.0",
+  "description": "socialtalk is a social messaging app",
+  "homepage": "https://github.com/eightrix/social-talk#readme",
+  "bugs": {
+    "url": "https://github.com/eightrix/social-talk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eightrix/social-talk.git"
+  },
+  "license": "ISC",
+  "author": "eightrix",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server",
+    "compile:sass": "sass --watch sass/app.scss public/assets/css/app.css",
+    "start": "npm-run-all --parallel devserver compile:sass",
+    "prefix:css": "postcss public/assets/css/app.css -o public/assets/css/app.prefix.css --use autoprefixer",
+    "minify:css": "sass --watch public/assets/css/app.prefix.css public/css/app.min.css --style=compressed",
+    "build:css": "npm-run-all --parallel prefix:css minify:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2"
+  }
+}
