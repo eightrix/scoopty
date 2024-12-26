@@ -15,6 +15,59 @@
     <link rel="stylesheet" href="./public/assets/css/app.css" />
   </head>
   <body>
-    <h1>Welcome to SocialTalk!</h1>
+    <main id="app">
+      <div class="navigation">
+        <div class="profile">
+          <figure>
+            <img src="./public/assets/imgs/no-photo.png" alt="display photo" />
+            <figcaption>Jane Doe</figcaption>
+          </figure>
+        </div>
+        <ul>
+          <li><a href="">Messages</a></li>
+          <li><a href="">Private Messages</a></li>
+          <li><a href="">Notifications</a></li>
+          <li><a href="">Settings</a></li>
+        </ul>
+        <div>
+          <ul>
+            <li><a href="">Log off</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="search">Search form</div>
+        <div class="contact__item">
+          <div class="follower">
+            <figure>
+              <img src="" alt="follower display photo" />
+            </figure>
+
+            <div>
+              <div class="follower__name">John Doe</div>
+              <div class="follower_message">Lorem ipsum dolor sit amet.</div>
+            </div>
+
+            <div>
+              <div class="message__datetime">Today, 11:45am</div>
+              <div class="message__counter">5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="message">
+        <form action="">
+          <div class="input">
+            <textarea name="message" id="message">
+Type your message here...</textarea
+            >
+          </div>
+
+          <input type="file" name="file" id="file" />
+        </form>
+      </div>
+    </main>
   </body>
 </html>
