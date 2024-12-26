@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 #app {
   display: flex;
   gap: 3.6rem;
@@ -6,7 +8,6 @@
   max-width: 120rem;
   height: calc(100vh - 6.4rem);
   margin: 3.2rem auto;
-  padding: 0;
   overflow: hidden;
 
   .contact,
@@ -22,24 +23,25 @@
   }
 
   .navigation {
-    flex: 0 0 18rem;
+    flex: 0 0 22rem;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 3.2rem;
 
-    padding: 1.6rem 0;
-    background-color: brown;
+    padding: 2.4rem 0 1.6rem;
+    background-color: #f14668;
     overflow: auto;
 
     .profile {
       margin: 0 auto;
+
       figure {
         img {
           max-width: 100%;
           height: 10rem;
-          border: 1px solid white;
+          border: 5px solid white;
           border-radius: 50%;
           cursor: pointer;
         }
@@ -62,22 +64,38 @@
 
       a {
         display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
         padding: 1.6rem;
         border-top-left-radius: 1.5rem;
         border-bottom-left-radius: 1.5rem;
+        transition: $transition;
 
         &:hover {
-          background-color: yellow;
+          border-right: 5px solid rgb(155, 12, 41);
+          background-color: rgb(224, 54, 88);
+        }
+
+        &:active,
+        &.active {
+          border-right: 5px solid rgb(155, 12, 41);
+          background-color: rgb(224, 54, 88);
         }
       }
     }
   }
+
+  .contact,
+  .message {
+    background-color: #fff;
+  }
+
   .contact {
     flex: 0 0 36rem;
-    background-color: aqua;
   }
+
   .message {
     flex: 1;
-    background-color: antiquewhite;
   }
 }
