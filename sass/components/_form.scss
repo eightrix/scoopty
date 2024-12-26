@@ -1,0 +1,225 @@
+@import "../abstracts/variables";
+
+.form {
+  margin: 0;
+  font-size: 1.6rem;
+
+  &__horizontal {
+    display: grid;
+    align-items: start;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1.6rem;
+
+    width: 100%;
+
+    button {
+      margin-top: 0.8rem;
+      padding: 1.2rem 1.2rem 1rem;
+      // border: 0.1rem solid $link-color-primary;
+    }
+  }
+
+  fieldset {
+    border: none;
+
+    &:not(:last-of-type) {
+      padding-bottom: 4rem;
+      border-bottom: 0.1rem solid rgba(80, 161, 109, 0.15);
+    }
+
+    &:last-of-type {
+      margin-bottom: -1.6rem;
+    }
+
+    legend {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__group {
+    display: grid;
+    align-items: start;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1.6rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    .input-icon {
+      position: absolute;
+
+      top: 50%;
+      left: 3.2rem;
+      transform: translate(-50%, -50%);
+
+      width: 2.4rem;
+      height: 2.4rem;
+      color: #999;
+
+      &.textarea {
+        top: 2.4rem;
+      }
+
+      &.password {
+        left: calc(100% - 2.4rem);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        &.hide {
+          display: none;
+        }
+
+        &.show {
+          display: block;
+        }
+      }
+    }
+
+    input[type="text"],
+    input[type="search"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="file"],
+    input[type="checkbox"],
+    select,
+    textarea {
+      position: relative;
+
+      width: 100%;
+      font-family: "Archivo", sans-serif;
+      font-size: inherit;
+      font-weight: inherit;
+      padding: 1.6rem 1.6rem 1.6rem 5.4rem;
+      // color: $font-color-primary;
+      border: 0.1rem solid #e0e0e0;
+      border-radius: 3rem;
+      background-color: rgba(217, 217, 217, 0.15);
+      outline: none;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(217, 217, 217, 0.25);
+      }
+
+      &:focus {
+        // border: 0.1rem solid $font-color-tertiary;
+      }
+    }
+
+    input[type="password"] {
+      padding-right: 4.4rem;
+    }
+
+    input[type="file"] {
+      padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+      cursor: pointer;
+    }
+
+    select {
+      appearance: none;
+      background: rgba(217, 217, 217, 0.15)
+        url("../../../public/icons/chevron-down.svg") no-repeat
+        calc(100% - 0.8rem) center;
+      background-size: 3.6rem;
+      cursor: pointer;
+
+      &.payment {
+        padding-left: 1.6rem;
+      }
+
+      optgroup {
+        padding: 16rem 0 !important;
+      }
+
+      option:not(:first-of-type) {
+        // color: $font-color-primary;
+      }
+    }
+
+    textarea {
+      height: 15rem;
+      padding-top: 1.5rem;
+      resize: none;
+
+      &.message {
+        height: 20rem;
+      }
+
+      &.admin {
+        height: 30rem;
+      }
+    }
+
+    ::placeholder {
+      color: #999;
+    }
+
+    :disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  button {
+    font-family: "Archivo", sans-serif;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin: 0.4rem 0;
+
+    label {
+      display: flex;
+      font-weight: 400;
+      margin-top: -0.2rem;
+
+      cursor: pointer;
+
+      a {
+        display: flex;
+
+        margin-left: 0.3rem;
+      }
+    }
+
+    input[type="checkbox"] {
+      width: 1.6rem;
+      height: 1.6rem;
+      // accent-color: $font-color-tertiary;
+      border-radius: 5rem;
+      border: 0.1rem solid #e0e0e0;
+      cursor: pointer;
+    }
+  }
+}

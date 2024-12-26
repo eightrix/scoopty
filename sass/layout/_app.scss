@@ -2,7 +2,7 @@
 
 #app {
   display: flex;
-  gap: 3.6rem;
+  gap: 3.2rem;
 
   width: 100%;
   max-width: 120rem;
@@ -12,12 +12,10 @@
 
   .contact,
   .message {
-    padding: 2.4rem;
     border-radius: 2.4rem;
   }
 
   .navigation,
-  .contact,
   .message {
     border-radius: 2.4rem;
   }
@@ -86,16 +84,24 @@
     }
   }
 
-  .contact,
-  .message {
-    background-color: #fff;
-  }
-
   .contact {
-    flex: 0 0 36rem;
+    flex: 0 0 42rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    &__search,
+    &__item {
+      // padding: 1.6rem;
+      background-color: #fff;
+      border-radius: $border-radius-primary;
+    }
   }
 
   .message {
     flex: 1;
+
+    background-color: #fff;
   }
 }
