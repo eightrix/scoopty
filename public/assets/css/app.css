@@ -1,17 +1,126 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 8 | @use "components/icon";
- *   | ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\app.scss 8:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 8 \2502  @use \"components/icon\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\app.scss 8:1  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+.navigation,
+.navigation a {
+  color: #fff;
+}
+
+.icon {
+  width: 2.4rem;
+  stroke-width: 2px;
+}
+
+#app {
+  display: flex;
+  gap: 3.6rem;
+  width: 100%;
+  max-width: 120rem;
+  height: calc(100vh - 6.4rem);
+  margin: 3.2rem auto;
+  overflow: hidden;
+}
+#app .contact,
+#app .message {
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+}
+#app .navigation,
+#app .contact,
+#app .message {
+  border-radius: 2.4rem;
+}
+#app .navigation {
+  flex: 0 0 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.2rem;
+  padding: 2.4rem 0 1.6rem;
+  background-color: #f14668;
+  overflow: auto;
+}
+#app .navigation .profile {
+  margin: 0 auto;
+}
+#app .navigation .profile figure img {
+  max-width: 100%;
+  height: 10rem;
+  border: 5px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#app .navigation .profile figure figcaption {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+#app .navigation ul {
+  margin-left: 1.6rem;
+  padding: 0;
+}
+#app .navigation li {
+  list-style: none;
+  margin: 1.6rem 0;
+}
+#app .navigation li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+#app .navigation li a:hover {
+  border-right: 5px solid rgb(155, 12, 41);
+  background-color: rgb(224, 54, 88);
+}
+#app .navigation li a:active, #app .navigation li a.active {
+  border-right: 5px solid rgb(155, 12, 41);
+  background-color: rgb(224, 54, 88);
+}
+#app .contact {
+  flex: 0 0 36rem;
+  background-color: aqua;
+}
+#app .message {
+  flex: 1;
+  background-color: antiquewhite;
+}
+
+/*# sourceMappingURL=app.css.map */
