@@ -42,14 +42,204 @@ h1 {
   color: #fff;
 }
 
+.form {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.form__horizontal {
+  display: grid;
+  align-items: start;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1.6rem;
+  width: 100%;
+}
+.form__horizontal button {
+  margin-top: 0.8rem;
+  padding: 1.2rem 1.2rem 1rem;
+}
+.form fieldset {
+  border: none;
+}
+.form fieldset:not(:last-of-type) {
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid rgba(80, 161, 109, 0.15);
+}
+.form fieldset:last-of-type {
+  margin-bottom: -1.6rem;
+}
+.form fieldset legend {
+  margin-bottom: 1.6rem;
+}
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form__group {
+  display: grid;
+  align-items: start;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1.6rem;
+}
+.form__group:not(:last-of-type) {
+  margin-bottom: 1.6rem;
+}
+.form__label {
+  display: flex;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form__input .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  transform: translate(-50%, -50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #999;
+}
+.form__input .input-icon.textarea {
+  top: 2.4rem;
+}
+.form__input .input-icon.password {
+  left: calc(100% - 2.4rem);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.form__input .input-icon.password.hide {
+  display: none;
+}
+.form__input .input-icon.password.show {
+  display: block;
+}
+.form__input input[type=text],
+.form__input input[type=search],
+.form__input input[type=email],
+.form__input input[type=password],
+.form__input input[type=number],
+.form__input input[type=tel],
+.form__input input[type=file],
+.form__input input[type=checkbox],
+.form__input select,
+.form__input textarea {
+  position: relative;
+  width: 100%;
+  font-family: "Archivo", sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 1.6rem 1.6rem 1.6rem 5.4rem;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 3rem;
+  background-color: rgba(217, 217, 217, 0.15);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.form__input input[type=text]:hover, .form__input input[type=text]:focus,
+.form__input input[type=search]:hover,
+.form__input input[type=search]:focus,
+.form__input input[type=email]:hover,
+.form__input input[type=email]:focus,
+.form__input input[type=password]:hover,
+.form__input input[type=password]:focus,
+.form__input input[type=number]:hover,
+.form__input input[type=number]:focus,
+.form__input input[type=tel]:hover,
+.form__input input[type=tel]:focus,
+.form__input input[type=file]:hover,
+.form__input input[type=file]:focus,
+.form__input input[type=checkbox]:hover,
+.form__input input[type=checkbox]:focus,
+.form__input select:hover,
+.form__input select:focus,
+.form__input textarea:hover,
+.form__input textarea:focus {
+  background-color: rgba(217, 217, 217, 0.25);
+}
+.form__input input[type=password] {
+  padding-right: 4.4rem;
+}
+.form__input input[type=file] {
+  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+  cursor: pointer;
+}
+.form__input select {
+  appearance: none;
+  background: rgba(217, 217, 217, 0.15) url("../../../public/icons/chevron-down.svg") no-repeat calc(100% - 0.8rem) center;
+  background-size: 3.6rem;
+  cursor: pointer;
+}
+.form__input select.payment {
+  padding-left: 1.6rem;
+}
+.form__input select optgroup {
+  padding: 16rem 0 !important;
+}
+.form__input textarea {
+  height: 15rem;
+  padding-top: 1.5rem;
+  resize: none;
+}
+.form__input textarea.message {
+  height: 20rem;
+}
+.form__input textarea.admin {
+  height: 30rem;
+}
+.form__input ::placeholder {
+  color: #999;
+}
+.form__input :disabled {
+  cursor: not-allowed;
+}
+.form button {
+  font-family: "Archivo", sans-serif;
+}
+.form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0.4rem 0;
+}
+.form .checkbox label {
+  display: flex;
+  font-weight: 400;
+  margin-top: -0.2rem;
+  cursor: pointer;
+}
+.form .checkbox label a {
+  display: flex;
+  margin-left: 0.3rem;
+}
+.form .checkbox input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 5rem;
+  border: 0.1rem solid #e0e0e0;
+  cursor: pointer;
+}
+
 .icon {
   width: 2.4rem;
   stroke-width: 2px;
 }
 
+.input-icon {
+  stroke-width: 4px;
+}
+
 #app {
   display: flex;
-  gap: 3.6rem;
+  gap: 3.2rem;
   width: 100%;
   max-width: 120rem;
   height: calc(100vh - 6.4rem);
@@ -58,11 +248,9 @@ h1 {
 }
 #app .contact,
 #app .message {
-  padding: 2.4rem;
   border-radius: 2.4rem;
 }
 #app .navigation,
-#app .contact,
 #app .message {
   border-radius: 2.4rem;
 }
@@ -115,15 +303,19 @@ h1 {
   border-right: 5px solid rgb(155, 12, 41);
   background-color: rgb(224, 54, 88);
 }
-#app .contact,
-#app .message {
-  background-color: #fff;
-}
 #app .contact {
-  flex: 0 0 36rem;
+  flex: 0 0 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+#app .contact__search, #app .contact__item {
+  background-color: #fff;
+  border-radius: 2.4rem;
 }
 #app .message {
   flex: 1;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */
