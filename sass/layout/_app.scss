@@ -86,13 +86,16 @@
     }
   }
 
+  .contact,
+  .message {
+    background-color: #fff;
+  }
+
   .contact {
     flex: 0 0 36rem;
-    background-color: aqua;
   }
 
   .message {
     flex: 1;
-    background-color: antiquewhite;
   }
 }

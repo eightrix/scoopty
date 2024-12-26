@@ -21,6 +21,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #666;
+  background-color: #ece6e7;
   line-height: 1.7;
 }
 
@@ -114,13 +115,15 @@ h1 {
   border-right: 5px solid rgb(155, 12, 41);
   background-color: rgb(224, 54, 88);
 }
+#app .contact,
+#app .message {
+  background-color: #fff;
+}
 #app .contact {
   flex: 0 0 36rem;
-  background-color: aqua;
 }
 #app .message {
   flex: 1;
-  background-color: antiquewhite;
 }
 
 /*# sourceMappingURL=app.css.map */
