@@ -35,7 +35,7 @@
         img {
           max-width: 100%;
           height: 10rem;
-          border: 5px solid white;
+          border: 5px solid #fff;
           border-radius: 50%;
           cursor: pointer;
         }
@@ -87,9 +87,10 @@
     gap: 2.4rem;
 
     &__search,
-    &__item {
+    &__heading,
+    &__item,
+    &__footer {
       background-color: #fff;
-      border-radius: $border-radius-primary;
     }
 
     &__search {
@@ -98,6 +99,16 @@
       left: 0;
 
       width: 100%;
+      border-radius: $border-radius-primary;
+    }
+
+    &__heading {
+      padding: 1.6rem;
+      font-size: 2rem;
+      font-weight: 700;
+      border-top-left-radius: $border-radius-primary;
+      border-top-right-radius: $border-radius-primary;
+      border-bottom: 1px solid #d4d2d2;
     }
 
     &__item {
@@ -105,15 +116,17 @@
       flex-direction: column;
       gap: 1.6rem;
 
-      padding: 1.6rem;
+      margin: -2.4rem 0;
+      padding: 1.6rem 1.6rem 0;
       overflow-y: auto;
       scrollbar-width: thin;
-      scrollbar-color: #ddd7d8 #ece6e7;
+      scrollbar-color: #ddd7d8 #fff;
+    }
 
-      .heading {
-        font-size: 2rem;
-        font-weight: 700;
-      }
+    &__footer {
+      padding: 1.2rem;
+      border-bottom-left-radius: $border-radius-primary;
+      border-bottom-right-radius: $border-radius-primary;
     }
   }
 
@@ -123,11 +136,11 @@
     align-items: center;
     gap: 0.8rem;
 
-    padding-bottom: 0.8rem;
-    margin-bottom: 0.8rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
 
     &:not(:last-child) {
-      padding-bottom: 2.4rem;
+      padding-bottom: 1.9rem;
       border-bottom: 1px solid #d4d2d2;
     }
 
