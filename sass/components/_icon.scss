@@ -6,4 +6,15 @@
 .input-icon {
   stroke-width: 2px;
   cursor: pointer;
+
+  &.upload {
+    width: 100%;
+    height: 100%;
+    margin-left: -0.8rem;
+    padding: 1.2rem;
+  }
+
+  &.send {
+    margin-left: -0.8rem;
+  }
 }
