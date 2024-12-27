@@ -10,14 +10,14 @@
   margin: 3.2rem auto;
   overflow: hidden;
 
+  .navigation,
   .contact,
   .message {
     border-radius: 2.4rem;
   }
 
-  .navigation,
   .message {
-    border-radius: 2.4rem;
+    padding: 2.4rem 2.4rem 1.6rem;
   }
 
   .navigation {
@@ -96,12 +96,23 @@
       border-radius: $border-radius-primary;
     }
 
+    &__search {
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+    }
+
     &__item {
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
 
       padding: 1.6rem;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #ddd7d8 #ece6e7;
 
       .heading {
         font-size: 2rem;
