@@ -99,7 +99,7 @@ h1 {
   position: relative;
 }
 .form__input.chat {
-  width: 87%;
+  width: 89%;
 }
 .form__input .input-icon {
   position: absolute;
@@ -139,7 +139,7 @@ h1 {
   padding: 2.5rem;
 }
 .form__input .chat-btn {
-  right: -8.4rem;
+  right: -7.6rem;
   background-color: #dfdddd;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
