@@ -1,4 +1,4 @@
-const textarea = document.getElementById("dynamic-textarea");
+const textarea = document.getElementById("message");
 
 textarea.addEventListener("input", function () {
   this.style.height = "auto"; // Reset the height

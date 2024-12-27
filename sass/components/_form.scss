@@ -70,6 +70,10 @@
 
     position: relative;
 
+    &.chat {
+      width: 87%;
+    }
+
     .input-icon {
       position: absolute;
 
@@ -100,6 +104,49 @@
       }
     }
 
+    .attach-file,
+    .chat-btn {
+      position: absolute;
+
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #dfdddd;
+    }
+
+    .attach-file {
+      right: -2.8rem;
+
+      padding: 2.5rem;
+      // border-top-right-radius: 5rem;
+      // border-bottom-right-radius: 5rem;
+    }
+
+    .chat-btn {
+      right: -8.4rem;
+
+      background-color: #dfdddd;
+      border-top-right-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        padding: 2.4rem;
+        border: 1px solid #e0e0e0;
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
     input[type="text"],
     input[type="search"],
     input[type="email"],
@@ -122,7 +169,7 @@
       border-radius: 3rem;
       background-color: rgba(217, 217, 217, 0.15);
       outline: none;
-      transition: all 0.2s ease-in-out;
+      transition: $transition;
       cursor: pointer;
 
       &:hover,
@@ -181,11 +228,13 @@
       }
 
       &.chat {
-        height: 5rem;
+        max-height: 5rem;
+        padding: 1.2rem 5.4rem;
         background-color: #f0f0f0;
         border-radius: 3rem;
         box-sizing: border-box;
-        overflow: hidden;
+        // overflow: hidden;
+        line-height: 1.5;
       }
     }
 
@@ -234,9 +283,9 @@
   }
 }
 
-input[type="file"] {
-  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
-  display: none;
-  visibility: hidden;
-  cursor: pointer;
-}
+// input[type="file"] {
+//   padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+//   display: none;
+//   visibility: hidden;
+//   cursor: pointer;
+// }
