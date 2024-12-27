@@ -246,13 +246,13 @@ h1 {
   margin: 3.2rem auto;
   overflow: hidden;
 }
+#app .navigation,
 #app .contact,
 #app .message {
   border-radius: 2.4rem;
 }
-#app .navigation,
 #app .message {
-  border-radius: 2.4rem;
+  padding: 2.4rem 2.4rem 1.6rem;
 }
 #app .navigation {
   flex: 0 0 22rem;
@@ -312,11 +312,20 @@ h1 {
   background-color: #fff;
   border-radius: 2.4rem;
 }
+#app .contact__search {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 #app .contact__item {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   padding: 1.6rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd7d8 #ece6e7;
 }
 #app .contact__item .heading {
   font-size: 2rem;
