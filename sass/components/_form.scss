@@ -141,6 +141,8 @@
 
     input[type="file"] {
       padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+      display: none;
+      visibility: hidden;
       cursor: pointer;
     }
 
@@ -176,6 +178,14 @@
 
       &.admin {
         height: 30rem;
+      }
+
+      &.chat {
+        height: 5rem;
+        background-color: #f0f0f0;
+        border-radius: 3rem;
+        box-sizing: border-box;
+        overflow: hidden;
       }
     }
 
@@ -222,4 +232,11 @@
       cursor: pointer;
     }
   }
+}
+
+input[type="file"] {
+  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+  display: none;
+  visibility: hidden;
+  cursor: pointer;
 }

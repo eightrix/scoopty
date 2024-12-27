@@ -16,10 +16,6 @@
     border-radius: 2.4rem;
   }
 
-  .message {
-    padding: 2.4rem 2.4rem 1.6rem;
-  }
-
   .navigation {
     flex: 0 0 22rem;
 
@@ -118,76 +114,82 @@
         font-size: 2rem;
         font-weight: 700;
       }
+    }
+  }
 
-      .follower {
+  .follower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    &:not(:last-child) {
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid #d4d2d2;
+    }
+
+    figure {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      img {
+        max-width: 100%;
+        height: 6rem;
+        border: 3px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &.recipient {
+        img {
+          height: 8rem;
+        }
+      }
+
+      figcaption {
+        margin-top: 0.8rem;
+        text-align: center;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    &__name {
+      font-weight: 700;
+    }
+
+    &__datetime {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    &__counter {
+      display: flex;
+      justify-content: flex-end;
+
+      &--value {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 0.8rem;
 
-        padding-bottom: 0.8rem;
-        margin-bottom: 0.8rem;
-
-        &:not(:last-child) {
-          padding-bottom: 2.4rem;
-          border-bottom: 1px solid #d4d2d2;
-        }
-
-        figure {
-          display: flex;
-          align-items: center;
-          gap: 0.8rem;
-
-          img {
-            max-width: 100%;
-            height: 6rem;
-            border: 3px solid white;
-            border-radius: 50%;
-            cursor: pointer;
-          }
-
-          figcaption {
-            margin-top: 0.8rem;
-            text-align: center;
-          }
-        }
-
-        &__item {
-          display: flex;
-          flex-direction: column;
-          line-height: 1.3;
-        }
-
-        &__name {
-          font-weight: 700;
-        }
-
-        &__datetime {
-          display: flex;
-          justify-content: flex-end;
-          font-weight: 600;
-          font-size: 1.2rem;
-        }
-
-        &__counter {
-          display: flex;
-          justify-content: flex-end;
-
-          &--value {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            width: 1.2rem;
-            height: 1.2rem;
-            padding: 1.2rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #fff;
-            background-color: #f14668;
-            border-radius: 50%;
-          }
-        }
+        width: 1.2rem;
+        height: 1.2rem;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #f14668;
+        border-radius: 50%;
       }
     }
   }
@@ -199,6 +201,32 @@
     flex-direction: column;
     justify-content: space-between;
 
+    padding: 2.4rem 1.6rem;
     background-color: #fff;
+
+    &__recipient {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      figure {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        img {
+          max-width: 100%;
+          height: 8rem;
+          border: 3px solid white;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        figcaption {
+          margin-top: 0.8rem;
+          text-align: center;
+        }
+      }
+    }
   }
 }

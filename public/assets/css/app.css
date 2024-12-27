@@ -170,6 +170,8 @@ h1 {
 }
 .form__input input[type=file] {
   padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+  display: none;
+  visibility: hidden;
   cursor: pointer;
 }
 .form__input select {
@@ -194,6 +196,13 @@ h1 {
 }
 .form__input textarea.admin {
   height: 30rem;
+}
+.form__input textarea.chat {
+  height: 5rem;
+  background-color: #f0f0f0;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .form__input ::placeholder {
   color: #999;
@@ -228,13 +237,21 @@ h1 {
   cursor: pointer;
 }
 
+input[type=file] {
+  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+  display: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+
 .icon {
   width: 2.4rem;
   stroke-width: 2px;
 }
 
 .input-icon {
-  stroke-width: 4px;
+  stroke-width: 2px;
+  cursor: pointer;
 }
 
 #app {
@@ -250,9 +267,6 @@ h1 {
 #app .contact,
 #app .message {
   border-radius: 2.4rem;
-}
-#app .message {
-  padding: 2.4rem 2.4rem 1.6rem;
 }
 #app .navigation {
   flex: 0 0 22rem;
@@ -331,7 +345,7 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
 }
-#app .contact__item .follower {
+#app .follower {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -339,45 +353,48 @@ h1 {
   padding-bottom: 0.8rem;
   margin-bottom: 0.8rem;
 }
-#app .contact__item .follower:not(:last-child) {
+#app .follower:not(:last-child) {
   padding-bottom: 2.4rem;
   border-bottom: 1px solid #d4d2d2;
 }
-#app .contact__item .follower figure {
+#app .follower figure {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
-#app .contact__item .follower figure img {
+#app .follower figure img {
   max-width: 100%;
   height: 6rem;
   border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
 }
-#app .contact__item .follower figure figcaption {
+#app .follower figure.recipient img {
+  height: 8rem;
+}
+#app .follower figure figcaption {
   margin-top: 0.8rem;
   text-align: center;
 }
-#app .contact__item .follower__item {
+#app .follower__item {
   display: flex;
   flex-direction: column;
   line-height: 1.3;
 }
-#app .contact__item .follower__name {
+#app .follower__name {
   font-weight: 700;
 }
-#app .contact__item .follower__datetime {
+#app .follower__datetime {
   display: flex;
   justify-content: flex-end;
   font-weight: 600;
   font-size: 1.2rem;
 }
-#app .contact__item .follower__counter {
+#app .follower__counter {
   display: flex;
   justify-content: flex-end;
 }
-#app .contact__item .follower__counter--value {
+#app .follower__counter--value {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,7 +412,29 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2.4rem 1.6rem;
   background-color: #fff;
+}
+#app .message__recipient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .message__recipient figure {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+#app .message__recipient figure img {
+  max-width: 100%;
+  height: 8rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#app .message__recipient figure figcaption {
+  margin-top: 0.8rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */
