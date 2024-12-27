@@ -130,9 +130,9 @@
         background-color: rgba(217, 217, 217, 0.25);
       }
 
-      &:focus {
-        // border: 0.1rem solid $font-color-tertiary;
-      }
+      // &:focus {
+      //   border: 0.1rem solid $font-color-tertiary;
+      // }
     }
 
     input[type="password"] {
@@ -160,9 +160,9 @@
         padding: 16rem 0 !important;
       }
 
-      option:not(:first-of-type) {
-        // color: $font-color-primary;
-      }
+      // option:not(:first-of-type) {
+      //   color: $font-color-primary;
+      // }
     }
 
     textarea {
