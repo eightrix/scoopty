@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  max-width: 120rem;
   margin: 0 auto;
   font-family: "Archivo", sans-serif;
   font-size: 1.6rem;
@@ -307,7 +308,6 @@ h1 {
   display: flex;
   gap: 3.2rem;
   width: 100%;
-  max-width: 120rem;
   height: calc(100vh - 6.4rem);
   margin: 3.2rem auto;
   overflow: hidden;
