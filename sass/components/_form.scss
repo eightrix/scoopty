@@ -37,12 +37,6 @@
     }
   }
 
-  &__input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
   &__group {
     display: grid;
     align-items: start;
@@ -53,6 +47,12 @@
     &:not(:last-of-type) {
       margin-bottom: 1.6rem;
     }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   &__label {

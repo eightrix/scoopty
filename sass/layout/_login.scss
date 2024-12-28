@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+
+#login {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  height: calc(100vh - 6.4rem);
+  margin: 3.2rem auto;
+  overflow: hidden;
+
+  .login,
+  .landing {
+    padding: 2.4rem;
+    overflow: auto;
+  }
+
+  .login {
+    flex: 0 0 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.2rem;
+
+    background-color: #fff;
+    border-radius: $border-radius-primary;
+  }
+}
