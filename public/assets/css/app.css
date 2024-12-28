@@ -30,7 +30,8 @@ img {
   display: block;
 }
 
-a {
+a:link {
+  padding: 1rem 1.6rem;
   text-decoration: none;
 }
 
@@ -54,7 +55,7 @@ h1 {
 }
 
 .lead {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -69,7 +70,23 @@ h1 {
 
 p {
   margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem 3.2rem;
+  font-family: "Archivo", sans-serif;
   font-size: 1.8rem;
+  font-weight: 600;
+  color: inherit;
+  border: none;
+  border-radius: 2.4rem;
+  border: 0.1rem solid #e0e0e0;
+  cursor: pointer;
 }
 
 .form {
@@ -119,7 +136,7 @@ p {
 .form__label {
   display: flex;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -527,7 +544,7 @@ p {
 #login {
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 1.6rem;
   height: calc(100vh - 6.4rem);
   margin: 3.2rem auto;
   overflow: hidden;
@@ -542,7 +559,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3.2rem;
+  gap: 1.6rem;
   background-color: #fff;
   border-radius: 2.4rem;
 }
