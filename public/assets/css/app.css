@@ -42,6 +42,11 @@ h1 {
   color: #fff;
 }
 
+.heading-1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
 .form {
   margin: 0;
   font-size: 1.6rem;
@@ -317,10 +322,13 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3.2rem;
+  gap: 1.6rem;
   padding: 2.4rem 0 1.6rem;
   background-color: #f14668;
   overflow: auto;
+}
+#app .navigation .heading-1 {
+  text-align: center;
 }
 #app .navigation .profile {
   margin: 0 auto;
@@ -342,7 +350,7 @@ h1 {
 }
 #app .navigation li {
   list-style: none;
-  margin: 1.6rem 0;
+  margin: 0.8rem 0;
 }
 #app .navigation li a {
   display: flex;
@@ -379,7 +387,7 @@ h1 {
 #app .contact__header {
   padding: 1.6rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   border-top-left-radius: 2.4rem;
   border-top-right-radius: 2.4rem;
   border-bottom: 1px solid #d4d2d2;
