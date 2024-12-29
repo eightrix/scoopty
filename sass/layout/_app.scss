@@ -65,6 +65,7 @@
         gap: 0.8rem;
 
         padding: 1.6rem;
+        font-weight: 500;
         border-top-left-radius: 1.5rem;
         border-bottom-left-radius: 1.5rem;
         transition: $transition;
@@ -166,11 +167,6 @@
           height: 8rem;
         }
       }
-
-      figcaption {
-        margin-top: 0.8rem;
-        text-align: center;
-      }
     }
 
     &__item {
@@ -237,11 +233,6 @@
           border: 3px solid white;
           border-radius: 50%;
           cursor: pointer;
-        }
-
-        figcaption {
-          margin-top: 0.8rem;
-          text-align: center;
         }
       }
     }

@@ -35,6 +35,12 @@ a:link {
   text-decoration: none;
 }
 
+figcaption {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 h1 {
   font-size: 3.6rem;
 }
@@ -403,6 +409,7 @@ p {
   align-items: center;
   gap: 0.8rem;
   padding: 1.6rem;
+  font-weight: 500;
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   transition: all 0.2s ease-in-out;
@@ -481,10 +488,6 @@ p {
 #app .follower figure.recipient img {
   height: 8rem;
 }
-#app .follower figure figcaption {
-  margin-top: 0.8rem;
-  text-align: center;
-}
 #app .follower__item {
   display: flex;
   flex-direction: column;
@@ -540,10 +543,6 @@ p {
   border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
-}
-#app .message__recipient figure figcaption {
-  margin-top: 0.8rem;
-  text-align: center;
 }
 
 #auth {
