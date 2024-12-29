@@ -44,19 +44,26 @@ h1 {
   color: #fff;
 }
 
+.brand .heading-1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
 .heading-1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
 .heading-2 {
+  margin-bottom: 0.8rem;
   font-size: 2.4rem;
   font-weight: 600;
 }
 
 .lead {
+  margin-bottom: 1.8rem;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .title {
@@ -64,7 +71,7 @@ h1 {
 }
 
 .highlight {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
@@ -80,7 +87,7 @@ p {
   gap: 0.8rem;
   padding: 1.6rem 3.2rem;
   font-family: "Archivo", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: inherit;
   border: none;
@@ -94,16 +101,14 @@ p {
   font-size: 1.6rem;
 }
 .form__horizontal {
-  display: grid;
-  align-items: start;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 1.6rem;
   width: 100%;
 }
 .form__horizontal button {
-  margin-top: 0.8rem;
-  padding: 1.2rem 1.2rem 1rem;
+  margin-top: -0.8rem;
 }
 .form fieldset {
   border: none;
@@ -349,7 +354,7 @@ p {
   display: flex;
   gap: 3.2rem;
   width: 100%;
-  height: calc(100vh - 6.4rem);
+  max-height: calc(100vh - 6.4rem);
   margin: 3.2rem auto;
   overflow: hidden;
 }
@@ -541,25 +546,53 @@ p {
   text-align: center;
 }
 
-#login {
+#auth {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   gap: 1.6rem;
   height: calc(100vh - 6.4rem);
   margin: 3.2rem auto;
   overflow: hidden;
 }
-#login .login,
-#login .landing {
-  padding: 2.4rem;
+#auth .auth__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+#auth .auth__header .brand {
+  flex: 0 0 40rem;
+}
+#auth .auth__header .signin {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#auth .auth__header .signin input {
+  background-color: #fff;
+}
+#auth .auth__body {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+#auth .auth__body .intro,
+#auth .auth__body .signup {
   overflow: auto;
 }
-#login .login {
-  flex: 0 0 40%;
+#auth .auth__body .intro {
+  padding: 2.4rem 0;
+}
+#auth .auth__body .signup {
+  flex: 0 0 41rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1.6rem;
+  padding: 2.4rem;
   background-color: #fff;
   border-radius: 2.4rem;
 }
