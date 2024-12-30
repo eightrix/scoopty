@@ -35,6 +35,14 @@ a:link {
   text-decoration: none;
 }
 
+figure {
+  img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
 figcaption {
   margin-top: 0.8rem;
   font-weight: 600;
