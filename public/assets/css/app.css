@@ -157,7 +157,7 @@ p {
   position: relative;
 }
 .form__input.chat {
-  width: 79%;
+  width: 78%;
 }
 .form__input.chat .message-btn {
   position: sticky;
@@ -166,7 +166,7 @@ p {
 .form__input.chat .message-btn .chat-btn {
   position: absolute;
   top: 0;
-  transform: translate(2.2rem, -100%);
+  transform: translate(2.4rem, -100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,12 +175,12 @@ p {
 .form__input.chat .message-btn .attach-file {
   right: -2.8rem;
   padding: 2.5rem;
+  border-radius: 5rem;
 }
 .form__input.chat .message-btn .chat-btn {
-  right: -7.6rem;
+  right: -8rem;
   background-color: #dfdddd;
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  border-radius: 3rem;
 }
 .form__input.chat .message-btn .chat-btn button {
   display: flex;
@@ -190,8 +190,7 @@ p {
   padding: 2.4rem;
   background-color: #f14668;
   border: 1px solid #e0e0e0;
-  border-top-right-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  border-radius: 3rem;
   outline: none;
   cursor: pointer;
 }
@@ -298,12 +297,11 @@ p {
   height: 5rem;
   padding: 1.2rem 1.2rem 1.2rem 5.4rem;
   background-color: #f0f0f0;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 0;
+  border-radius: 3rem;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd7d8 #fff;
   line-height: 1.5;
 }
 .form__input ::placeholder {
