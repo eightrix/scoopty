@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -210,14 +215,14 @@ p {
   outline: none;
   cursor: pointer;
 }
-.form__input input[type="text"],
-.form__input input[type="search"],
-.form__input input[type="email"],
-.form__input input[type="password"],
-.form__input input[type="number"],
-.form__input input[type="tel"],
-.form__input input[type="file"],
-.form__input input[type="checkbox"],
+.form__input input[type=text],
+.form__input input[type=search],
+.form__input input[type=email],
+.form__input input[type=password],
+.form__input input[type=number],
+.form__input input[type=tel],
+.form__input input[type=file],
+.form__input input[type=checkbox],
 .form__input select,
 .form__input textarea {
   position: relative;
@@ -233,32 +238,31 @@ p {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.form__input input[type="text"]:hover,
-.form__input input[type="text"]:focus,
-.form__input input[type="search"]:hover,
-.form__input input[type="search"]:focus,
-.form__input input[type="email"]:hover,
-.form__input input[type="email"]:focus,
-.form__input input[type="password"]:hover,
-.form__input input[type="password"]:focus,
-.form__input input[type="number"]:hover,
-.form__input input[type="number"]:focus,
-.form__input input[type="tel"]:hover,
-.form__input input[type="tel"]:focus,
-.form__input input[type="file"]:hover,
-.form__input input[type="file"]:focus,
-.form__input input[type="checkbox"]:hover,
-.form__input input[type="checkbox"]:focus,
+.form__input input[type=text]:hover, .form__input input[type=text]:focus,
+.form__input input[type=search]:hover,
+.form__input input[type=search]:focus,
+.form__input input[type=email]:hover,
+.form__input input[type=email]:focus,
+.form__input input[type=password]:hover,
+.form__input input[type=password]:focus,
+.form__input input[type=number]:hover,
+.form__input input[type=number]:focus,
+.form__input input[type=tel]:hover,
+.form__input input[type=tel]:focus,
+.form__input input[type=file]:hover,
+.form__input input[type=file]:focus,
+.form__input input[type=checkbox]:hover,
+.form__input input[type=checkbox]:focus,
 .form__input select:hover,
 .form__input select:focus,
 .form__input textarea:hover,
 .form__input textarea:focus {
   background-color: rgba(217, 217, 217, 0.25);
 }
-.form__input input[type="password"] {
+.form__input input[type=password] {
   padding-right: 4.4rem;
 }
-.form__input input[type="file"] {
+.form__input input[type=file] {
   padding: 0.8rem 1.2rem 0.8rem 1.6rem;
   display: none;
   visibility: hidden;
@@ -266,9 +270,7 @@ p {
 }
 .form__input select {
   appearance: none;
-  background: rgba(217, 217, 217, 0.15)
-    url("../../../public/icons/chevron-down.svg") no-repeat calc(100% - 0.8rem)
-    center;
+  background: rgba(217, 217, 217, 0.15) url("../../../public/icons/chevron-down.svg") no-repeat calc(100% - 0.8rem) center;
   background-size: 3.6rem;
   cursor: pointer;
 }
@@ -322,7 +324,7 @@ p {
   display: flex;
   margin-left: 0.3rem;
 }
-.form .checkbox input[type="checkbox"] {
+.form .checkbox input[type=checkbox] {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 5rem;
@@ -411,8 +413,7 @@ p {
 #app .navigation li a:hover {
   background-color: rgb(224, 54, 88);
 }
-#app .navigation li a:active,
-#app .navigation li a.active {
+#app .navigation li a:active, #app .navigation li a.active {
   border-right: 5px solid rgb(155, 12, 41);
   background-color: rgb(224, 54, 88);
 }
@@ -422,10 +423,7 @@ p {
   flex-direction: column;
   gap: 2.4rem;
 }
-#app .contact__search,
-#app .contact__header,
-#app .contact__item,
-#app .contact__footer {
+#app .contact__search, #app .contact__header, #app .contact__item, #app .contact__footer {
   background-color: #fff;
 }
 #app .contact__search {
