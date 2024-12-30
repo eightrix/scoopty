@@ -159,11 +159,11 @@ p {
 .form__input.chat {
   width: 78%;
 }
-.form__input.chat .message-btn {
+.form__input.chat .message__btn {
   position: sticky;
 }
-.form__input.chat .message-btn .attach-file,
-.form__input.chat .message-btn .chat-btn {
+.form__input.chat .message__btn .attach-file,
+.form__input.chat .message__btn .chat-btn {
   position: absolute;
   top: 0;
   transform: translate(2.4rem, -100%);
@@ -172,17 +172,17 @@ p {
   align-items: center;
   background-color: #dfdddd;
 }
-.form__input.chat .message-btn .attach-file {
+.form__input.chat .message__btn .attach-file {
   right: -2.8rem;
   padding: 2.5rem;
   border-radius: 5rem;
 }
-.form__input.chat .message-btn .chat-btn {
+.form__input.chat .message__btn .chat-btn {
   right: -8rem;
   background-color: #dfdddd;
   border-radius: 3rem;
 }
-.form__input.chat .message-btn .chat-btn button {
+.form__input.chat .message__btn .chat-btn button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,10 +299,10 @@ p {
   background-color: #f0f0f0;
   border-radius: 3rem;
   box-sizing: border-box;
+  line-height: 1.5;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #ddd7d8 #fff;
-  line-height: 1.5;
 }
 .form__input ::placeholder {
   color: #999;
