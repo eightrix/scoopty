@@ -1,0 +1,65 @@
+@import "../abstracts/variables";
+
+#auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+
+  height: calc(100vh - 6.4rem);
+  margin: 3.2rem auto;
+  overflow: hidden;
+
+  .auth__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+
+    width: 100%;
+    margin: 0 auto;
+
+    .brand {
+      flex: 0 0 40rem;
+    }
+
+    .signin {
+      flex: 1;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      input {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .auth__body {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    .intro,
+    .signup {
+      overflow: auto;
+    }
+
+    .intro {
+      padding: 2.4rem 0;
+    }
+
+    .signup {
+      flex: 0 0 41rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      padding: 2.4rem;
+      background-color: #fff;
+      border-radius: $border-radius-primary;
+    }
+  }
+}

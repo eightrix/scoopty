@@ -1,0 +1,595 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 120rem;
+  margin: 0 auto;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #666;
+  background-color: #ece6e7;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+}
+
+a:link {
+  padding: 1rem 1.6rem;
+  text-decoration: none;
+}
+
+figcaption {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+.navigation,
+.navigation a {
+  color: #fff;
+}
+
+.brand .heading-1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.heading-1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.heading-2 {
+  margin-bottom: 0.8rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.lead {
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.highlight {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem 3.2rem;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: inherit;
+  border: none;
+  border-radius: 2.4rem;
+  border: 0.1rem solid #e0e0e0;
+  cursor: pointer;
+}
+
+.form {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.form__horizontal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.6rem;
+  width: 100%;
+}
+.form__horizontal button {
+  margin-top: -0.8rem;
+}
+.form fieldset {
+  border: none;
+}
+.form fieldset:not(:last-of-type) {
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid rgba(80, 161, 109, 0.15);
+}
+.form fieldset:last-of-type {
+  margin-bottom: -1.6rem;
+}
+.form fieldset legend {
+  margin-bottom: 1.6rem;
+}
+.form__group {
+  display: grid;
+  align-items: start;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1.6rem;
+}
+.form__group:not(:last-of-type) {
+  margin-bottom: 1.6rem;
+}
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form__label {
+  display: flex;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form__input.chat {
+  width: 89%;
+}
+.form__input .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  transform: translate(-50%, -50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #999;
+}
+.form__input .input-icon.textarea {
+  top: 2.4rem;
+}
+.form__input .input-icon.password {
+  left: calc(100% - 2.4rem);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.form__input .input-icon.password.hide {
+  display: none;
+}
+.form__input .input-icon.password.show {
+  display: block;
+}
+.form__input .attach-file,
+.form__input .chat-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfdddd;
+}
+.form__input .attach-file {
+  right: -2.8rem;
+  padding: 2.5rem;
+}
+.form__input .chat-btn {
+  right: -7.6rem;
+  background-color: #dfdddd;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.form__input .chat-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.4rem;
+  background-color: #f14668;
+  border: 1px solid #e0e0e0;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  outline: none;
+  cursor: pointer;
+}
+.form__input input[type=text],
+.form__input input[type=search],
+.form__input input[type=email],
+.form__input input[type=password],
+.form__input input[type=number],
+.form__input input[type=tel],
+.form__input input[type=file],
+.form__input input[type=checkbox],
+.form__input select,
+.form__input textarea {
+  position: relative;
+  width: 100%;
+  font-family: "Archivo", sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 1.6rem 1.6rem 1.6rem 5.4rem;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 3rem;
+  background-color: rgba(217, 217, 217, 0.15);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.form__input input[type=text]:hover, .form__input input[type=text]:focus,
+.form__input input[type=search]:hover,
+.form__input input[type=search]:focus,
+.form__input input[type=email]:hover,
+.form__input input[type=email]:focus,
+.form__input input[type=password]:hover,
+.form__input input[type=password]:focus,
+.form__input input[type=number]:hover,
+.form__input input[type=number]:focus,
+.form__input input[type=tel]:hover,
+.form__input input[type=tel]:focus,
+.form__input input[type=file]:hover,
+.form__input input[type=file]:focus,
+.form__input input[type=checkbox]:hover,
+.form__input input[type=checkbox]:focus,
+.form__input select:hover,
+.form__input select:focus,
+.form__input textarea:hover,
+.form__input textarea:focus {
+  background-color: rgba(217, 217, 217, 0.25);
+}
+.form__input input[type=password] {
+  padding-right: 4.4rem;
+}
+.form__input input[type=file] {
+  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+  display: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+.form__input select {
+  appearance: none;
+  background: rgba(217, 217, 217, 0.15) url("../../../public/icons/chevron-down.svg") no-repeat calc(100% - 0.8rem) center;
+  background-size: 3.6rem;
+  cursor: pointer;
+}
+.form__input select.payment {
+  padding-left: 1.6rem;
+}
+.form__input select optgroup {
+  padding: 16rem 0 !important;
+}
+.form__input textarea {
+  height: 15rem;
+  padding-top: 1.5rem;
+  resize: none;
+}
+.form__input textarea.message {
+  height: 20rem;
+}
+.form__input textarea.admin {
+  height: 30rem;
+}
+.form__input textarea.chat {
+  max-height: 5rem;
+  padding: 1.2rem 5.4rem;
+  background-color: #f0f0f0;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+.form__input ::placeholder {
+  color: #999;
+}
+.form__input :disabled {
+  cursor: not-allowed;
+}
+.form button {
+  font-family: "Archivo", sans-serif;
+}
+.form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0.4rem 0;
+}
+.form .checkbox label {
+  display: flex;
+  font-weight: 400;
+  margin-top: -0.2rem;
+  cursor: pointer;
+}
+.form .checkbox label a {
+  display: flex;
+  margin-left: 0.3rem;
+}
+.form .checkbox input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 5rem;
+  border: 0.1rem solid #e0e0e0;
+  cursor: pointer;
+}
+
+.icon {
+  width: 2.4rem;
+  stroke-width: 2px;
+}
+
+.input-icon {
+  stroke-width: 2px;
+}
+.input-icon.upload {
+  width: 100%;
+  height: 100%;
+  margin-left: -0.8rem;
+  padding: 1.2rem;
+}
+.input-icon.send {
+  stroke: #fff;
+  margin-left: -0.8rem;
+}
+
+.icon,
+.input-icon {
+  cursor: pointer;
+}
+
+#app {
+  display: flex;
+  gap: 3.2rem;
+  width: 100%;
+  max-height: calc(100vh - 6.4rem);
+  margin: 3.2rem auto;
+  overflow: hidden;
+}
+#app .navigation,
+#app .contact,
+#app .message {
+  border-radius: 2.4rem;
+}
+#app .navigation {
+  flex: 0 0 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 2.4rem 0 1.6rem;
+  background-color: #f14668;
+  overflow: auto;
+}
+#app .navigation .heading-1 {
+  text-align: center;
+}
+#app .navigation .profile {
+  margin: 0 auto;
+}
+#app .navigation .profile figure img {
+  max-width: 100%;
+  height: 8rem;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#app .navigation ul {
+  margin-left: 1.6rem;
+  padding: 0;
+}
+#app .navigation li {
+  list-style: none;
+  margin: 0.8rem 0;
+}
+#app .navigation li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem;
+  font-weight: 500;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+#app .navigation li a:hover {
+  background-color: rgb(224, 54, 88);
+}
+#app .navigation li a:active, #app .navigation li a.active {
+  border-right: 5px solid rgb(155, 12, 41);
+  background-color: rgb(224, 54, 88);
+}
+#app .contact {
+  flex: 0 0 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+#app .contact__search, #app .contact__header, #app .contact__item, #app .contact__footer {
+  background-color: #fff;
+}
+#app .contact__search {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 2.4rem;
+}
+#app .contact__header {
+  padding: 1.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-top-left-radius: 2.4rem;
+  border-top-right-radius: 2.4rem;
+  border-bottom: 1px solid #d4d2d2;
+}
+#app .contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 100vh;
+  margin: -2.4rem 0;
+  padding: 1.6rem 1.6rem 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd7d8 #fff;
+}
+#app .contact__footer {
+  padding: 1.2rem;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+}
+#app .follower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+#app .follower:not(:last-child) {
+  padding-bottom: 1.9rem;
+  border-bottom: 1px solid #d4d2d2;
+}
+#app .follower figure {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+#app .follower figure img {
+  max-width: 100%;
+  height: 4.8rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#app .follower figure.recipient img {
+  height: 6.4rem;
+}
+#app .follower__item {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+#app .follower__name {
+  font-weight: 700;
+}
+#app .follower__datetime {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+#app .follower__counter {
+  display: flex;
+  justify-content: flex-end;
+}
+#app .follower__counter--value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f14668;
+  border-radius: 50%;
+}
+#app .message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.4rem 1.6rem;
+  background-color: #fff;
+}
+#app .message__recipient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .message__recipient figure {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+#app .message__recipient figure img {
+  max-width: 100%;
+  height: 8rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  height: calc(100vh - 6.4rem);
+  margin: 3.2rem auto;
+  overflow: hidden;
+}
+#auth .auth__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+#auth .auth__header .brand {
+  flex: 0 0 40rem;
+}
+#auth .auth__header .signin {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#auth .auth__header .signin input {
+  background-color: #fff;
+}
+#auth .auth__body {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+#auth .auth__body .intro,
+#auth .auth__body .signup {
+  overflow: auto;
+}
+#auth .auth__body .intro {
+  padding: 2.4rem 0;
+}
+#auth .auth__body .signup {
+  flex: 0 0 41rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: 2.4rem;
+}
+
+/*# sourceMappingURL=app.css.map */
