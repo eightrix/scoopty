@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  max-width: 120rem;
   margin: 0 auto;
   font-family: "Archivo", sans-serif;
   font-size: 1.6rem;
@@ -29,6 +30,13 @@ img {
   display: block;
 }
 
-a {
+a:link {
+  padding: 1rem 1.6rem;
   text-decoration: none;
+}
+
+figcaption {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  text-align: center;
 }
