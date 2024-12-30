@@ -291,9 +291,13 @@
       }
 
       &--content {
-        // margin-bottom: 0.8rem;
         padding: 1.6rem 0;
         border-bottom: 1px solid #d4d2d2;
+
+        &:last-of-type {
+          // padding-bottom: 0;
+          border-bottom: none;
+        }
       }
 
       &--user {
@@ -308,6 +312,7 @@
       }
 
       &--footer {
+        padding: 1.2rem 1.6rem;
         border-bottom-left-radius: 3rem;
         border-bottom-right-radius: 3rem;
       }
